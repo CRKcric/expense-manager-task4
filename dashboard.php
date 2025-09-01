@@ -43,6 +43,8 @@ if (!isset($_SESSION['user_id'])) {
     <div class="dashboard-actions">
         <a href="add_transaction.php"><button>➕ Add Transaction</button></a>
         <a href="view_transaction.php"><button>📜 View Transactions</button></a>
+        <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
+            <a href="admin_panel.php"><button style="background: #1976d2;">🛠️ Admin Panel</button></a>
         <a href="logout.php"><button style="background: #b71c1c;">🚪 Logout</button></a>
     </div>
 </div>
