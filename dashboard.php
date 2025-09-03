@@ -24,6 +24,15 @@ if (!isset($_SESSION['user_id'])) {
             padding: 12px;
             font-size: 1rem;
         }
+        .dashboard-actions .admin-btn {
+            background: #1976d2;
+        }
+        .dashboard-actions .profile-btn {
+            background: #388e3c;
+        }
+        .dashboard-actions .logout-btn {
+            background: #b71c1c;
+        }
         .welcome {
             background: #f5f5f5;
             padding: 15px;
@@ -41,11 +50,13 @@ if (!isset($_SESSION['user_id'])) {
     </div>
 
     <div class="dashboard-actions">
-        <a href="add_transaction.php"><button>➕ Add Transaction</button></a>
-        <a href="view_transaction.php"><button>📜 View Transactions</button></a>
+        <a href="add_transaction.php"><button type="button">➕ Add Transaction</button></a>
+        <a href="view_transaction.php"><button type="button">📜 View Transactions</button></a>
         <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
-            <a href="admin_panel.php"><button style="background: #1976d2;">🛠️ Admin Panel</button></a>
-        <a href="logout.php"><button style="background: #b71c1c;">🚪 Logout</button></a>
+            <a href="admin_panel.php"><button type="button" class="admin-btn">🛠️ Admin Panel</button></a>
+        <?php endif; ?>
+        <a href="profile.php"><button type="button" class="profile-btn">👤 My Profile</button></a>
+        <a href="logout.php"><button type="button" class="logout-btn">🚪 Logout</button></a>
     </div>
 </div>
 </body>
