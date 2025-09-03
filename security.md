@@ -6,7 +6,7 @@ Security patches are applied to the latest version only.
 
 ## Reporting a Vulnerability
 If you find a security issue, please contact us immediately at:
-📧 official@apexplanet.in  
+📧 crkrishna10a@gmail.com  
 
 We will review and fix vulnerabilities as quickly as possible.
 
